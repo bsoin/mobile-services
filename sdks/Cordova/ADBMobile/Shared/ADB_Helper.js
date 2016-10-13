@@ -181,6 +181,7 @@ var ADB = (function () {
 	};	
 
 	ADB.visitorSyncIdentifiers = function(identifiers, success, fail) {
+		console.log('visitorSyncIdentifiers');
 		return cordova.exec(success, fail, "ADBMobile_PhoneGap", "visitorSyncIdentifiers", [identifiers]);
 	};
 

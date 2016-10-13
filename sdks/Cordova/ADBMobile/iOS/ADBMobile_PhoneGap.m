@@ -663,8 +663,10 @@
 		
 		NSDictionary *identifiers = getArg(command.arguments[0]);
 		
-		[ADBMobile visitorSyncIdentifiers:identifiers];
-		
+		//[ADBMobile visitorSyncIdentifiers:identifiers];
+		NSLog(@"visitorSyncIdentifiers");
+		[ADBMobile visitorSyncIdentifiers:identifiers authenticationState:ADBMobileVisitorAuthenticationStateAuthenticated];
+
 		[self.commandDelegate sendPluginResult:[CDVPluginResult resultWithStatus:CDVCommandStatus_OK] callbackId:command.callbackId];
 	}];
 }
